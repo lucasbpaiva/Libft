@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 23:17:26 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/25 14:19:25 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/25 14:25:40 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
 
 #endif
