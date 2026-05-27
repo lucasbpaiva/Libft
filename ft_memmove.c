@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 10:55:57 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/25 11:19:06 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/27 14:39:18 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (NULL);
 	src_ptr = (unsigned char *)src;
 	dst_ptr = (unsigned char *)dest;
-	if (dst_ptr > src_ptr)
+	if (dst_ptr > src_ptr && dst_ptr < src_ptr + n)
 	{
 		while (n > 0)
 		{
