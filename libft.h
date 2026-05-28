@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 23:17:26 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/27 21:51:46 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/27 21:59:54 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
