@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 17:26:02 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/28 18:01:29 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/28 18:03:43 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!lst || !f || !del)
 		return (NULL);
 	mapped_list = NULL;
-	if (!mapped_list)
-		return (NULL);
 	while (lst)
 	{
 		new_content = f(lst->content);
