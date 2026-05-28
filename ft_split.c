@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 09:53:22 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/27 11:31:39 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/28 11:59:51 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,29 +46,12 @@ static int	ft_get_word_len(char const *s, char c, int *i)
 	return (len);
 }
 
-static char	*ft_strndup(char const *src, int n)
-{
-	char	*cpy;
-	int		i;
-
-	cpy = malloc(sizeof(char) * (n + 1));
-	if (!cpy)
-		return (NULL);
-	i = 0;
-	while (src[i] && i < n)
-	{
-		cpy[i] = src[i];
-		i++;
-	}
-	cpy[i] = '\0';
-	return (cpy);
-}
-
-static void	ft_free_all(char **result, int j)
+static void	*ft_free_all(char **result, int j)
 {
 	while (j >= 0)
 		free(result[j--]);
 	free(result);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -90,12 +73,12 @@ char	**ft_split(char const *s, char c)
 		len = ft_get_word_len(s, c, &i);
 		if (len > 0)
 		{
-			result[j] = ft_strndup(&s[i], len);
-			if (!result[j])
-				return (ft_free_all(result, j - 1), NULL);
-			j++;
+			result[j] = ft_substr(s, i, len);
+			if (!result[j++])
+				return (ft_free_all(result, j - 2));
 			i += len;
 		}
 	}
-	return (result[j] = NULL, result);
+	result[j] = NULL;
+	return (result);
 }
