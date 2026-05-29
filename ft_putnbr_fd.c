@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 21:58:52 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/27 22:10:03 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/05/29 09:32:04 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	num = n;
 	if (num < 0)
 	{
-		ft_putchar_fd("-", fd);
+		ft_putchar_fd('-', fd);
 		num *= -1;
 	}
 	if (num >= 10)
