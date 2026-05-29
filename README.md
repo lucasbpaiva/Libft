@@ -150,5 +150,5 @@ In alignment with modern software documentation standards, an AI assistant was u
 
    * Assisted in organizing the Makefile layout, ensuring correct archive creation using ar rc and ranlib without relying on potentially dangerous wildcards (like ft_*.c).
 
-4. README structure and contents
+4. README structure and contents:
    * AI was used to generate the general structure of this README file and the detailed description section, summarizing the contents of the project. All generated outputs were carefully read and edited by the author to ensure they accurately describe and fit the requirements of the project.
