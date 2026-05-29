@@ -5,7 +5,7 @@
 ## Description
 The **Libft** project is a foundational milestone in the 42 curriculum. Its primary goal is to re-code a comprehensive selection of standard C library functions (`libc`), along with specialized utility functions to manipulate strings, memory and linked lists. 
 
-In the C programming language standard functions are highly optimized and readily available. However, by writing these functions from scratch, this project forces a deep, hands-on understanding of memory allocation, pointer arithmetic, data structure design, and the low-level behavior of computer memory. The resulting static library (`libft.a`) serves as a highly efficient, reliable, and reusable toolkit that will be used extensively in almost all subsequent 42 C-based programming projects (such as *ft_printf* and *push_swap*).
+In the C programming language standard functions are highly optimized and readily available. However, by writing these functions from scratch, this project forces a deep, hands-on understanding of memory allocation, pointer arithmetic, data structure design and the low-level behavior of computer memory. The resulting static library (`libft.a`) serves as a highly efficient, reliable and reusable toolkit that will be used extensively in almost all subsequent 42 C-based programming projects (such as *ft_printf* and *push_swap*).
 
 ## Instructions
 
@@ -15,8 +15,8 @@ To compile and use this library, you need a Unix-like environment (Linux or macO
 ### Compilation Targets
 The library includes a strict, 42-compliant Makefile supporting the standard compilation targets:
 
-* `make` or `make all`: Compiles all core C functions and additional/linked list functions and generates the static library archive `libft.a`.
-* `make clean`: Safely purges all object files (`.o`) from the directory.
+* `make` or `make all`: Compiles all core C functions and additional/linked list utilities, generating the static library archive `libft.a`.
+* `make clean`: Safely removes all object files (`.o`) from the directory.
 * `make fclean`: Executes `clean` and completely deletes the compiled static library archive (`libft.a`).
 * `make re`: Performs a full rebuild from scratch by running `fclean` followed by `all`.
 
@@ -32,7 +32,7 @@ To use this library in an external C project:
 	```
 
 ## Detailed Library Description
-The library contains a wide variety of utilities categorized by their structural behaviors. Every function is engineered to handle extreme bounds, edge cases and NULL-pointer defenses safely.
+The library contains a wide variety of utilities categorized by their structural behaviors. Every function is engineered to handle edge cases and NULL-pointer inputs safely.
 
 ### 1. Libc Functions (Standard Replacements)
 These functions precisely replicate the behavior of standard functions found within `<ctype.h>`, `<string.h>` and `<stdlib.h>`.
@@ -84,11 +84,11 @@ These functions are not part of the standard C library but provide essential mec
 
 * ft_strjoin: Concatenates two individual strings together into a brand new heap-allocated string block.
 
-* ft_strtrim: Trims all specified characters from the absolute beginning and end of a string.
+* ft_strtrim: Trims all specified characters from the beginning and end of a string.
 
 * ft_split: Splits a string into an array of strings using a single specified delimiter character.
 
-* ft_itoa: Converts a signed integer value into a null-terminated string representation (handling negative numbers smoothly).
+* ft_itoa: Converts a signed integer value into a null-terminated string representation.
 
 * ft_strmapi: Applies a function to each character of a string to create a new modified string.
 
@@ -108,15 +108,15 @@ typedef struct s_list
 ```
 * ft_lstnew: Allocates and initializes a new list node structure with its content.
 
-* ft_lstadd_front: Prepends a new node to the absolute front of a linked list.
+* ft_lstadd_front: Prepends a new node to the front of a linked list.
 
 * ft_lstsize: Counts the exact number of nodes currently inside a linked list.
 
-* ft_lstlast: Progresses through a list to return a tracking pointer to the absolute last non-null node.
+* ft_lstlast: Iterates over a list to return a pointer to the last non-null node.
 
-* ft_lstadd_back: Appends a node safely to the trailing back of a linked list.
+* ft_lstadd_back: Appends a node to the back of a linked list.
 
-* ft_lstdelone: Cleanses a targeted node's content using a custom del function pointer and frees the node memory without triggering a cascade delete.
+* ft_lstdelone: Erases and frees a targeted node's content using a custom del function pointer and frees the node memory without deleting subsequent nodes.
 
 * ft_lstclear: Iterates through an entire linked list, deleting and freeing all nodes and clearing out the original head reference to prevent dangling references.
 
