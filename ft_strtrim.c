@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 14:29:50 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/26 15:11:31 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/06/01 11:33:48 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (ft_includes(set, s1[start]) && s1[start])
+	while (s1[start] && ft_includes(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
-	while (ft_includes(set, s1[end - 1]) && end > start)
+	while (end > start && ft_includes(set, s1[end - 1]))
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
