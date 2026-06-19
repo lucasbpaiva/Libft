@@ -6,7 +6,7 @@
 /*   By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 10:47:26 by lbalderr          #+#    #+#             */
-/*   Updated: 2026/05/26 11:47:55 by lbalderr         ###   ########.fr       */
+/*   Updated: 2026/06/19 17:22:58 by lbalderr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ int	ft_atoi(const char *nptr)
 		result = (result * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return ((int)sign * result);
+	return ((int)(sign * result));
 }
