@@ -6,7 +6,7 @@
 #    By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/28 21:23:41 by lbalderr          #+#    #+#              #
-#    Updated: 2026/06/20 12:01:41 by lbalderr         ###   ########.fr        #
+#    Updated: 2026/06/20 13:13:50 by lbalderr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,8 @@ SRCS	= srcs/libc/ft_isalpha.c \
 		  srcs/ft_printf/ft_print_str.c \
 		  srcs/ft_printf/ft_print_uint.c \
 		  srcs/ft_printf/ft_printf.c \
+		  srcs/gnl/get_next_line.c \
+		  srcs/gnl/get_next_line_utils.c \
 
 OBJS	= $(SRCS:.c=.o)
 INCS	= includes
