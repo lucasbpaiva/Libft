@@ -6,7 +6,7 @@
 #    By: lbalderr <lbalderr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/28 21:23:41 by lbalderr          #+#    #+#              #
-#    Updated: 2026/06/19 18:24:39 by lbalderr         ###   ########.fr        #
+#    Updated: 2026/06/20 12:01:41 by lbalderr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,15 @@ SRCS	= srcs/libc/ft_isalpha.c \
 		  srcs/linked_list/ft_lstdelone.c \
 		  srcs/linked_list/ft_lstclear.c \
 		  srcs/linked_list/ft_lstiter.c \
-		  srcs/linked_list/ft_lstmap.c
+		  srcs/linked_list/ft_lstmap.c \
+		  srcs/ft_printf/ft_dispatch.c \
+		  srcs/ft_printf/ft_print_char.c \
+		  srcs/ft_printf/ft_print_hex.c \
+		  srcs/ft_printf/ft_print_int.c \
+		  srcs/ft_printf/ft_print_ptr.c \
+		  srcs/ft_printf/ft_print_str.c \
+		  srcs/ft_printf/ft_print_uint.c \
+		  srcs/ft_printf/ft_printf.c \
 
 OBJS	= $(SRCS:.c=.o)
 INCS	= includes
